@@ -96,8 +96,8 @@ def moveValue(engine_Moves,chess_board,initial_move):
         clonemove=move
         if 'x' in move:
             x_Pos = move.index('x')
-            if '+' in move:
-                move = move[:-1:]
+            move=move.replace("#","")
+            move = move.replace("+","")
             piecePos = boardIndex(move[x_Pos + 1::])
             piece = chess_board.piece_at(piecePos)
             mod=1
