@@ -1,4 +1,6 @@
 # Chess
+If you wish to see the source code for tensorflow, please see the main.py file, if you just want to test the model, please use the test.py file. MAKE SURE TO EDIT THE PATHS OF THE FILES IN PYTHON OR ELSE THE MODELS AND DATA WONT BE FOUND SEE HERE FOR DATA THE I USED: https://database.nikonoel.fr/
+
  Everyone knows that chess is a complex game, some even say that there are 10^120 possible board positions. So hard coding an AI to play chess is virtually impossible. I have been playing Chess for a very long time, (since I was in grade school) and have always been interested in its evolution. As a result, I was naturally drawn towards both traditional chess engines such as stockfish and AlphaZero’s Neural network AI. 
 
 Data:
