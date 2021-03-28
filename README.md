@@ -15,11 +15,11 @@ How it works:
 
 The engine works by reading the state of the board and then inputs it into the neural network to obtain the next move.  The neural net basically memorizes popular positions and countermoves so that it can effectively play and counter any similar openings it faces, this solves the issues of most traditional engines which are bad at openings without hardcode. The minimax algorithm is there to handle very nontraditional and irregular board positions where the network predicts bad moves(move that lose material without compensation). In those cases, the minimax move is played instead.
 
+The minimax algorithm looks 4 possible moves deep into the game from the current state of the board and outputs the best possible move. The algortihm is sped up using lapha beta pruning to allow this to be feeasable. On average, the algorithm may take anywhere between 1 second to 10 seconds to output a move based on pruning and possible moves.
+
 Limitations:
 
 With the project explained, I need to get to the limitations of the engine. The main issue is that the neural net relies heavily on the training data I preprocessed being unique, so I ignored all other datapoints and countermoves to a board position once that position was already in the training data. A way to fix this would be to only add the move that ways played the most times as the correct answer rather than just adding the first. This would ensure that no “bad moves” would enter the engine’s training data. 
-
-Another thing is the minimax algorithm I created; this algorithm only searches at depth 3(the next 3 possible moves after the current move) due to time constraints. This would normally be solved using Alpha-Beta pruning, but I have yet to implement this at the time of writing this.
 
 Endgames in chess are also a thing that many chess engines suffer with, as a result, most chess engines have hardcoded endgame algorithms which will take over once endgame occurs. Mine does not so the ai may suffer to see proper checkmates come endgame.
 
