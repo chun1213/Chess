@@ -15,6 +15,44 @@ You will have to download the repo to use the engine, run this engine by opening
 model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
 ```
 
+<h1> Some openings </h1>
+You can play the engine as black or white, here are some opening moves the engine makes:
+remember that NO MOVES ARE HARD CODED in this engine, everything it plays is learned from the dataset.
+
+Engine (white):
+
+<p align="center">
+  <img src="https://github.com/chun1213/Chess/blob/main/images/turn1.png" width="300" />
+</p>
+
+It plays the theoretical best move e4
+
+It then plays the alpine opening and we reach a very humanlike game after: e5, Ne2, Nf6, Ng3, Nc6, c3,
+Shown using chess.com on the right:
+<p align="center">
+  <img src="https://github.com/chun1213/Chess/blob/main/images/alpine.png" width="300" />
+  <img src="https://github.com/chun1213/Chess/blob/main/images/alpinechess.com.png" width="300" />
+</p>
+
+
+
+
+Engine (Black):
+
+I play e4 as white.
+
+<p align="center">
+  <img src="https://github.com/chun1213/Chess/blob/main/images/turn1white.png" width="300" />
+</p>
+
+It plays the theoretical best move to counter e4, c5 the silcan defence
+
+This then becomes the silcan pin variation and we reach a very humanlike game after: c5, Nc3, e6, Nf3, f5
+Shown using chess.com on the right:
+<p align="center">
+  <img src="https://github.com/chun1213/Chess/blob/main/images/pinsilcan.png" width="300" />
+  <img src="https://github.com/chun1213/Chess/blob/main/images/pin silican.png" width="300" />
+</p>
 
 <h1> Data </h1>
 
