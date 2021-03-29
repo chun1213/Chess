@@ -45,9 +45,9 @@ I play e4 as white.
   <img src="https://github.com/chun1213/Chess/blob/main/images/turn1white.png" width="300" />
 </p>
 
-It plays the theoretical best move to counter e4, c5 the silcan defence
+It plays the theoretical best move to counter e4, c5 the silican defence
 
-This then becomes the silcan pin variation and we reach a very humanlike game after: c5, Nc3, e6, Nf3, f5
+This then becomes the closed silcan pin variation and we reach a very humanlike game after: c5, Nc3, e6, Nf3, f5
 Shown using chess.com on the right:
 <p align="center">
   <img src="https://github.com/chun1213/Chess/blob/main/images/pinsilcan.png" width="300" />
