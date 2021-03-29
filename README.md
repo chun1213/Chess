@@ -19,7 +19,7 @@ model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
 You can play the engine as black or white, here are some opening moves the engine makes:
 remember that NO MOVES ARE HARD CODED in this engine, everything it plays is learned from the dataset.
 
-Engine (white):
+Engine as White(Bottom) vs Me as Black(Top):
 
 <p align="center">
   <img src="https://github.com/chun1213/Chess/blob/main/images/turn1.png" width="300" />
@@ -37,7 +37,7 @@ Shown using chess.com on the right:
 
 
 
-Engine (Black):
+Engine as Black(Top) vs Me as White(Bottom):
 
 I play e4 as white.
 
