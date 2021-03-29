@@ -1,9 +1,12 @@
 <h1 align="center"> Chess Engine </h1>
 
 
-<p align="center">
-  <img src="https://github.com/chun1213/Chess/tree/main/images/chess.jpg?raw=true" />
-</p>
+![my image](/images/chess.jpg#center)
+
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
  Everyone knows that chess is a complex game, some even say that there are 10^120 possible board positions. So hard coding an AI to play chess is virtually impossible. I have been playing Chess for a very long time, (since I was in grade school) and have always been interested in its evolution. As a result, I was naturally drawn towards both traditional chess engines such as stockfish and AlphaZero’s Neural network AI. 
 
 
