@@ -1,7 +1,7 @@
 <h1 align="center"> Chess Engine </h1>
 
 <p align="center">
-  <img src="https://github.com/chun1213/Chess/blob/main/images/chess.jpg" style="width:100px;height:100px;" />
+  <img src="https://github.com/chun1213/Chess/blob/main/images/chess.jpg" width="600" />
 </p>
 
 
@@ -9,7 +9,7 @@
 
 
 <h1> Engine Use: </h1>
-You will have to download the repo to use the engine, run this engine by opening the "test.py" file, the relative path should already be calculated by the file itelf but if not, simply change the path located here to the path of the Chess9.2 folder inside the Models folder on line 13.
+You will have to download the repo to use the engine, run this engine by opening the "test.py" file, the relative path should already be calculated by the file itelf but if not, simply change the path shown here on line 13 to the path of the Chess9.2 folder inside the Models folder.
 
 ```python 
 model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
