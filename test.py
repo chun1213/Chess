@@ -1,10 +1,16 @@
 import os
+import pathlib
+
 import chess
 import chess.pgn
 import numpy as np
 from tensorflow import keras
 import tensorflow as tf
-model = keras.models.load_model('D:\ChessModels\Chess9.2')
+my_absolute_dirpath = os.path.abspath(os.path.dirname(__file__))
+print(my_absolute_dirpath)
+
+
+model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
 chess_dict = {
     'p' : [1,0,0,0,0,0,0,0,0,0,0,0],
     'P' : [0,0,0,0,0,0,1,0,0,0,0,0],
