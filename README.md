@@ -1,7 +1,7 @@
 <h1 align="center"> Chess Engine </h1>
 
 <p align="center">
-  <img src="https://github.com/chun1213/Chess/blob/main/images/chess.jpg" style="width:100px;height:100px;" />
+  <img src="https://github.com/chun1213/Chess/blob/main/images/chess.jpg" width="600" />
 </p>
 
 
