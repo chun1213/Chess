@@ -1,5 +1,8 @@
 <h1 align="center"> Chess Engine </h1>
-If you wish to see the source code for tensorflow, please see the main.py file, if you just want to test the model, please use the test.py file. MAKE SURE TO EDIT THE PATHS OF THE FILES IN PYTHON OR ELSE THE MODELS AND DATA WONT BE FOUND SEE HERE FOR DATA THE I USED: https://database.nikonoel.fr/
+
+<p align="center">
+[Chess](images/chess.jpg?raw=true "Title")
+</p>
 
  Everyone knows that chess is a complex game, some even say that there are 10^120 possible board positions. So hard coding an AI to play chess is virtually impossible. I have been playing Chess for a very long time, (since I was in grade school) and have always been interested in its evolution. As a result, I was naturally drawn towards both traditional chess engines such as stockfish and AlphaZero’s Neural network AI. 
 
@@ -15,6 +18,8 @@ model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
 <h1> Data </h1>
 
 The dataset I used to train the Neural Network part of this engine was obtained from Lichess.com where a user had put together many games played between users of 2200 Elo and above (2200 Elo is very skilled). I picked this as these users would likely play the best counter moves and openings in their games. I then preprocessed the data from the pgn files and normalized the data so each board position only had one unique move that followed it. The dataset was very large but I was only able to use 10000 different games due to TensorFlow training times increasing significantly per epoch with more games. (This is with GPU CUDA acceleration, I have a GTX 1060 6GB).
+
+See the dataset [here](https://database.nikonoel.fr/)
 
 <h1> Architecture </h1>
 
