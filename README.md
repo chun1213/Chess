@@ -1,4 +1,3 @@
-# Chess
 <h1 align="center"> Chess Engine </h1>
 If you wish to see the source code for tensorflow, please see the main.py file, if you just want to test the model, please use the test.py file. MAKE SURE TO EDIT THE PATHS OF THE FILES IN PYTHON OR ELSE THE MODELS AND DATA WONT BE FOUND SEE HERE FOR DATA THE I USED: https://database.nikonoel.fr/
 
@@ -7,7 +6,9 @@ If you wish to see the source code for tensorflow, please see the main.py file, 
 
 <h1 align="center"> Engine Use: </h1>
 You will have to download the repo to use the engine, run this engine by opening the "test.py" file, the relative path should already be calculated by the file itelf but if not, simply change the path located here to the path of the Chess9.2 folder inside the Models folder on line 13.
-```{python}<space>{model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')}```
+```python
+model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
+```
 
 
 Data:
