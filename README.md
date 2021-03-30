@@ -16,6 +16,9 @@ You will have to download the repo to use the engine, run this engine by opening
 model = keras.models.load_model(my_absolute_dirpath+'\Models\Chess9.2')
 ```
 
+<h1> Tech Used: </h1>
+This engine was coded in Python using Pycharm with the tensorflow framework, the chess.py library is used to simulate the chessboard.
+
 <h1> Some Openings </h1>
 You can play the engine as black or white, here are some opening moves the engine makes:
 remember that NO MOVES ARE HARD CODED in this engine, everything it plays is learned from the dataset.
