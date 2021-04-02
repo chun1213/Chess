@@ -120,27 +120,15 @@ def moveValue(engine_Moves,chess_board,initial_move):
     # print (baseValue)
     return baseValue
 
-def branching_moves(move,chess_board,depth):
-    if move != 'none':
-        chess_board.push_san(move)
-    legal_moves = str(chess_board.legal_moves)[38:-2].replace(',', '').split()
-    move_tree=[]
-    for moves in legal_moves:
-        move_line = []
-        board2=chess_board.copy()
-        if depth>0:
-            for x in branching_moves(moves,board2,depth-1):
-                move_line.append(moves)
-                move_line+=x
-                move_tree.append(move_line)
-                move_line = []
-        else:
-            move_line.append(moves)
-            move_tree.append(move_line)
-    return move_tree
-
 def evalBoard(position,player):
     score = 0
+    whiteking=position.king(True)
+    blackking = position.king(False)
+    if (position.ply()< 25) and ((whiteking==1) or (whiteking==2) or (whiteking==6)):
+        score+=0.1
+    if (position.ply()< 25) and ((blackking==57) or (blackking==58) or (blackking==62)):
+        score-=0.1
+
     if position.is_checkmate():
         if (player):
             return -9999
@@ -180,6 +168,20 @@ def minimax(position, depth, alpha, beta, maximizingPlayer):
     if maximizingPlayer:
         maxEval = -99999
         for move in legal_move:
+            if 'x' in move or '#' in move or '-' in move or '+' in move:
+                board2 = position.copy()
+                board2.push_san(move)
+                eval = minimax(board2, depth - 1, alpha, beta, False)[1]
+                if eval>maxEval:
+                    maxEval = eval
+                    bestMove=move
+                alpha = max(alpha, eval)
+                legal_move.remove(move);
+                if beta <= alpha:
+                    break
+            else:
+                pass
+        for move in legal_move:
             board2 = position.copy()
             board2.push_san(move)
             eval = minimax(board2, depth - 1, alpha, beta, False)[1]
@@ -194,15 +196,29 @@ def minimax(position, depth, alpha, beta, maximizingPlayer):
     else:
         minEval = +99999
         for move in legal_move:
-            board2 = position.copy()
-            board2.push_san(move)
-            eval = minimax(board2, depth - 1, alpha, beta, True)[1]
-            if eval < minEval:
-                minEval = eval
-                bestMove = move
-            beta = min(beta, eval)
-            if beta <= alpha:
-                break
+            if 'x' in move or '#' in move:
+                board2 = position.copy()
+                board2.push_san(move)
+                eval = minimax(board2, depth - 1, alpha, beta, True)[1]
+                if eval < minEval:
+                    minEval = eval
+                    bestMove = move
+                beta = min(beta, eval)
+                legal_move.remove(move);
+                if beta <= alpha:
+                    break
+            else:
+                pass
+        for move in legal_move:
+                board2 = position.copy()
+                board2.push_san(move)
+                eval = minimax(board2, depth - 1, alpha, beta, True)[1]
+                if eval < minEval:
+                    minEval = eval
+                    bestMove = move
+                beta = min(beta, eval)
+                if beta <= alpha:
+                    break
         return bestMove, minEval
 
 def eval_Branches(moveTree,chess_board):
@@ -276,8 +292,8 @@ while (not chess_board.is_stalemate() and not chess_board.is_insufficient_materi
     maximize = True
     currentVal = -99999
     print(chess_board)
+    print(chess_board)
     matrix = make_matrix(chess_board)
-    print(evalBoard(chess_board,maximize))
     board = translate(matrix,chess_dict)
     board = np.array(board)
     board = np.reshape(board,(1,8,8,12))
@@ -291,9 +307,9 @@ while (not chess_board.is_stalemate() and not chess_board.is_insufficient_materi
         engine_Move = legal_moves[len(legal_moves)-1]
     boardEngine = chess_board.copy()
     boardEngine.push_san(engine_Move)
-    engine_value=minimax(boardEngine, 3, -99999, +99999, not maximize)[1]
+    engine_value=minimax(boardEngine, 4, -99999, +99999, not maximize)[1]
     boardMini = chess_board.copy()
-    minmaxMove,val2 = minimax(boardMini, 4, -99999, +99999, maximize)
+    minmaxMove,val2 = minimax(boardMini, 5, -99999, +99999, maximize)
 
     print(maximize)
     print(minmaxMove)
