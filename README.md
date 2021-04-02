@@ -9,7 +9,7 @@
 
 
 <h1> Engine Use: </h1>
-<b>Right now the engine is aproaximatily at roughly an elo of 1600</b>
+<b>Right now the engine is aproaximatily at roughly an elo of 1600 and looks to a depth of 5</b>
 You will have to download the repo to use the engine, run this engine by opening the "test.py" file, the relative path should already be calculated by the file itelf but if not, simply change the path shown here on line 13 to the path of the Chess9.2 folder inside the Models folder.
 
 <b> You will need tensorflow to be installed on your system to use the engine </b>
@@ -75,7 +75,7 @@ The engine consists of two parts, a neural net and a minimax algorithm. The neur
 
 The engine works by reading the state of the board and then inputs it into the neural network to obtain the next move.  The neural net basically memorizes popular positions and countermoves so that it can effectively play and counter any similar openings it faces, this solves the issues of most traditional engines which are bad at openings without hardcode. The minimax algorithm is there to handle very nontraditional and irregular board positions where the network predicts bad moves(move that lose material without compensation). In those cases, the minimax move is played instead.
 
-The minimax algorithm looks 4 possible moves deep into the game from the current state of the board and outputs the best possible move. The algortihm is sped up using alpha-beta pruning to allow this to be feeasable. On average, the algorithm may take anywhere between 1 second to 10 seconds to output a move based on pruning and possible moves.
+The minimax algorithm looks 5 possible moves deep into the game from the current state of the board and outputs the best possible move. The algortihm is sped up using alpha-beta pruning to allow this to be feeasable. On average, the algorithm may take anywhere between 1 second to 30 seconds to output a move based on pruning and possible moves.
 
 <h1> Limitations </h1>
 
