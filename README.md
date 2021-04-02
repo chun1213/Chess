@@ -74,7 +74,7 @@ The engine consists of two parts, a neural net and a minimax algorithm. The neur
 
 The engine works by reading the state of the board and then inputs it into the neural network to obtain the next move.  The neural net basically memorizes popular positions and countermoves so that it can effectively play and counter any similar openings it faces, this solves the issues of most traditional engines which are bad at openings without hardcode. The minimax algorithm is there to handle very nontraditional and irregular board positions where the network predicts bad moves(move that lose material without compensation). In those cases, the minimax move is played instead.
 
-The minimax algorithm looks 4 possible moves deep into the game from the current state of the board and outputs the best possible move. The algortihm is sped up using lapha beta pruning to allow this to be feeasable. On average, the algorithm may take anywhere between 1 second to 10 seconds to output a move based on pruning and possible moves.
+The minimax algorithm looks 4 possible moves deep into the game from the current state of the board and outputs the best possible move. The algortihm is sped up using alpha-beta pruning to allow this to be feeasable. On average, the algorithm may take anywhere between 1 second to 10 seconds to output a move based on pruning and possible moves.
 
 <h1> Limitations </h1>
 
@@ -82,4 +82,4 @@ With the project explained, I need to get to the limitations of the engine. The 
 
 Endgames in chess are also a thing that many chess engines suffer with, as a result, most chess engines have hardcoded endgame algorithms which will take over once endgame occurs. Mine does not so the ai may suffer to see proper checkmates come endgame.
 
-The last limitation for this AI is the shallowness of the board evaluations, the minimax algorithm works to maximize the position of the player be looking into future moves. The evaluation for these moves in my algorithm lies soley in how much a piece is worth, meaning that the algorithm does not take into account piece development, king safety or board control which are other important aspects of chess. These are things that I am looking to implement however.
+The last limitation for this AI is the shallowness of the board evaluations, the minimax algorithm works to maximize the position of the player by looking into future moves. The evaluation for these moves in my algorithm lies soley in how much a piece is worth, meaning that the algorithm does not take into account piece development, king safety or board control and other important aspects of chess. These are things that I am looking to implement however.
