@@ -46,17 +46,17 @@ Shown using chess.com on the right:
 
 <h3>Engine as Black(Top) vs Me as White(Bottom):</h3>
 
-I play e4 as white.
+The Computer plays Nf3 as white.
 
 <p align="center">
   <img src="https://github.com/chun1213/Chess/blob/main/images/turn1white.png" width="300" />
 </p>
 
-It plays the theoretical best move to counter e4, c5 the silican defence
+I then play Nc6.
 
-This then becomes the closed silcan pin variation and we reach a very humanlike game after: c5, Nc3, e6, Nf3, f5,
+This then becomes a very humanlike three knights reverse sicilian after: Nc6, Nc3, c4, e5, Nc3,
 
-Shown using chess.com on the right:
+Shown using chess.com on the right and my output on the left:
 <p align="center">
   <img src="https://github.com/chun1213/Chess/blob/main/images/pinsilcan.png" width="300" />
   <img src="https://github.com/chun1213/Chess/blob/main/images/pin silican.png" width="300" />
@@ -64,7 +64,7 @@ Shown using chess.com on the right:
 
 <h1> Data </h1>
 
-The dataset I used to train the Neural Network part of this engine was obtained from Lichess.com where a user had put together many games played between users of 2200 Elo and above (2200 Elo is very skilled). I picked this as these users would likely play the best counter moves and openings in their games. I then preprocessed the data from the pgn files and normalized the data so each board position only had one unique move that followed it. The dataset was very large but I was only able to use 10000 different games due to TensorFlow training times increasing significantly per epoch with more games. (This is with GPU CUDA acceleration, I have a GTX 1060 6GB).
+The dataset I used to train the Neural Network part of this engine was obtained from Lichess.com where a user had put together many games played between users of 2200 Elo and above (2200 Elo is very skilled). I picked this as these users would likely play the best counter moves and openings in their games. I then preprocessed the data from the pgn files and normalized the data so each board position only had one unique move that followed it. The dataset was very large but I was only able to use 30000 different games due to TensorFlow training times increasing significantly per epoch with more games. (This is with GPU CUDA acceleration, I have a GTX 1060 6GB).
 
 See the dataset [here](https://database.nikonoel.fr/)
 
