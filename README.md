@@ -25,15 +25,15 @@ This engine was coded in Python using Pycharm with the tensorflow framework, the
 You can play the engine as black or white, here are some opening moves the engine makes:
 remember that NO MOVES ARE HARD CODED in this engine, everything it plays is learned from the dataset.
 
-<h3>Engine as White(Bottom) vs Me as Black(Top):</h3>
+<h3>Me as White(Bottom) vs Engine as Black(Top):</h3>
 
 <p align="center">
   <img src="https://github.com/chun1213/Chess/blob/main/images/turn1.png" width="300" />
 </p>
 
-It plays the theoretical best move e4
+I play e4
 
-It then plays the alpine opening and we reach a very humanlike game after: e5, Ne2, Nf6, Ng3, Nc6, c3,
+It then plays the silican defense and we reach a very humanlike game after: c5, Nc3, a6, Nf3, b5, d4, cxd4
 
 Shown using chess.com on the right:
 <p align="center">
@@ -44,7 +44,7 @@ Shown using chess.com on the right:
 
 
 
-<h3>Engine as Black(Top) vs Me as White(Bottom):</h3>
+<h3>Engine as White(Bottom) vs Me as Black(Top):</h3>
 
 The Computer plays Nf3 as white.
 
