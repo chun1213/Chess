@@ -9,7 +9,7 @@
 
 
 <h1> Engine Use: </h1>
-<b>Right now the engine is aproaximatily at roughly an elo of 1600 and looks to a depth of 5</b>
+<b>Right now the engine is aproaximatily at roughly an elo of 1200 and looks to a depth of 5</b>
 
 You will have to download the repo to use the engine, run this engine by opening the "test.py" file, the relative path should already be calculated by the file itelf but if not, simply change the path shown here on line 13 to the path of the Chess9.2 folder inside the Models folder.
 
